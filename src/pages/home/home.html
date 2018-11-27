@@ -1,25 +1,35 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>
-      Inicio
-    </ion-title>
-    <button ion-button>Inicio</button>
-    <button ion-button>Contacto</button>
-    <button ion-button>Acerca</button>
-    <button ion-button icon-only>
-      <ion-icon name="add"></ion-icon>
-    </button>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <img class="logotipo" src="../../assets/logo.png">
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list >
-    <ion-item *ngFor="let vivienda of viviendas | async" >
-      {{ vivienda.title }}
+  <ion-list class="list">
+    <ion-item *ngFor="let vivienda of viviendas | async" [navPush]="propertyDetails" [navParams]="vivienda">
+      <ion-card class="card">
+        <!--<img src="{{vivienda.image}}"/>-->
+        <img src="../../assets/logo.png">
+        <ion-card-content class="content-card" style="white-space: normal;">
+          <ion-card-title color="primary">
+            {{ vivienda.titulo }}
+            </ion-card-title>
+          <p>Baños: {{ vivienda.banos }}</p>
+          <p>Habitaciones: {{ vivienda.habitaciones }}</p>
+          <p>Localizacion: {{ vivienda.localizacion }}</p>
+          <h3>
+            {{ vivienda.precio }} €
+          </h3>
+        </ion-card-content>
+        <ion-buttons>
+          <button ion-button color="dark">Mas Informacion</button>
+        </ion-buttons>
+      </ion-card>
     </ion-item>
   </ion-list>
-  <!-- <p>Prueba</p>
-  <li *ngFor="let vivienda of viviendas | async">
-    {{ vivienda.title }}
-  </li> -->
 </ion-content>
