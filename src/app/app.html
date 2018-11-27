@@ -1,1 +1,21 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+    <ion-content padding>
+        <ion-list>
+            <ion-navbar color="primary">
+                <ion-title>Menu</ion-title>
+            </ion-navbar>
+            <button ion-item menuClose (click)="openPage(homePage)">
+                Inicio
+            </button>
+            <button ion-item menuClose (click)="openPage(catsPage)">
+                Contacto
+            </button>
+            <button ion-item menuClose (click)="openPage(dogsPage)">
+                Acerca de nosotros
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+<ion-nav [root]="rootPage" #content></ion-nav>
