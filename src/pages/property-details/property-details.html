@@ -8,24 +8,28 @@
 
 
 <ion-content padding>
-  <div class="images">
-    <ion-slides>
-      <ion-slide><img src="../../assets/logo.png"></ion-slide>
-      <ion-slide><img src="../../assets/logo.png"></ion-slide>
-      <ion-slide><img src="../../assets/logo.png"></ion-slide>
-      <ion-slide><img src="../../assets/logo.png"></ion-slide>
-    </ion-slides>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  <div class="details">
+
+    <div class="images">
+        <img src="{{object.imagen1}}"/> 
+        <img src="{{object.imagen2}}"/> 
+        <img src="{{object.imagen3}}"/> 
+        <img src="{{object.imagen4}}"/> 
+    </div>
+    <div class="content-details">
+      
+      <h3>Tipo:</h3>
+      <p>{{ object.tipo }}</p>
+      <h3>Descripcion:</h3>
+      <p>{{ object.descripcion }}</p>
+      <h3>Baños:</h3>
+      <p>{{ object.banos }}</p>
+      <h3>Habitaciones:</h3>
+      <p>{{ object.habitaciones }}</p>
+      <p>Garage</p>
+      <p>Ascensor</p>
+      <h3>Precio: {{ object.precio }} €</h3>
+      <h4>Contacto: 606 10 45 60</h4>
+    </div>
   </div>
-  <h3>Tipo:</h3>
-  <p>{{ object.tipo }}</p>
-  <h3>Descripcion:</h3>
-  <p>{{ object.descripcion }}</p>
-  <h3>Baños:</h3>
-  <p>{{ object.banos }}</p>
-  <h3>Habitaciones:</h3>
-  <p>{{ object.habitaciones }}</p>
-  <p>Garage</p>
-  <p>Ascensor</p>
-  <h3>Precio: {{ object.precio }} €</h3>
-  <h4>Contacto: 606 10 45 60</h4>
 </ion-content>

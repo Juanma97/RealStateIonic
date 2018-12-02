@@ -13,8 +13,7 @@
   <ion-list class="list">
     <ion-item *ngFor="let vivienda of viviendas | async" [navPush]="propertyDetails" [navParams]="vivienda">
       <ion-card class="card">
-        <!--<img src="{{vivienda.image}}"/>-->
-        <img src="../../assets/logo.png">
+        <img src="{{vivienda.imagen1}}"/>
         <ion-card-content class="content-card" style="white-space: normal;">
           <ion-card-title color="primary">
             {{ vivienda.titulo }}

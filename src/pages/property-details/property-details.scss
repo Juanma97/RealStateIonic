@@ -1,6 +1,19 @@
 page-property-details {
+    .details{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 16px;
+    }
+
     .images{
         display: grid;
         grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 8px;
+
+        img {
+            border-radius: 5%;
+        }
     }
+
 }
